@@ -1,0 +1,60 @@
+{
+    "name": "einar-hansen/laravel-psr-6-cache",
+    "description": "A PHP service that allows you to easily communicate with football-data.org apis using Laravel.",
+    "keywords": [
+        "einar",
+        "einar-hansen",
+        "laravel",
+        "cache",
+        "psr-6"
+    ],
+    "homepage": "https://github.com/einar-hansen/laravel-psr-6-cache",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Einar Hansen",
+            "email": "einar@einarhansen.dev",
+            "homepage": "https://einarhansen.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/cache": ">=5.8",
+        "illuminate/contracts": ">=5.8",
+        "psr/cache": "^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "pestphp/pest": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "EinarHansen\\Cache\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EinarHansen\\Cache\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan --level=9 analyse",
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,5 @@
+build
+certificate
+composer.lock
+vendor
+coverage
